@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fullWidth{
+  width: 100%;
+}
+.textCenter{
+  text-align: center;
+}
+.textRight{
+  text-align: right;
+}
+.mt1{
+  margin-top: 12px;
+}
+@keyframes flash {
+  0% {
+    background-color: #FFF2;
+    box-shadow: 22px 0 #FFF2, -22px 0 #303030;
+  }
+  50% {
+    background-color: #303030;
+    box-shadow: 22px 0 #FFF2, -22px 0 #FFF2;
+  }
+  100% {
+    background-color: #FFF2;
+    box-shadow: 22px 0 #303030, -22px 0 #FFF2;
+  }
+} 
