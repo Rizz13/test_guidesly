@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { TripContext } from "@/store/store";
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/router'
 import { TimeContainer } from "@/styles";
 import { times } from "@/constants";
 import { Button, Typography } from "antd";
