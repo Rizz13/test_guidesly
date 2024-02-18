@@ -29,7 +29,7 @@ export default function TimePicker() {
           
           <Button type="primary" className="fullWidth mt1" disabled={timeId === undefined}
           onClick={updateTime}>
-            <Link href="/details" replace>Choose a Guide</Link>
+            <Link href="/details" >Choose a Guide</Link>
           </Button>
         </>
   }
