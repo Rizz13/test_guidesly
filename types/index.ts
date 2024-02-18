@@ -37,3 +37,13 @@ interface IntialStateTypes{
     tripTimeId: string,
     activeTab: TabList
 }
+
+interface TableTypes {
+    key: string
+    title: string
+    desc: string
+    date: string
+    time: string
+    days: string
+    price: string
+}

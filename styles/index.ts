@@ -1,48 +1,6 @@
 import styled from "@emotion/styled";
 import { Button } from "antd";
 
-// interface WidgetTypes extends ThemeConfig {
-//   active?: boolean;
-//   gap?: number;
-//   col?: number;
-//   minHeight?: number;
-//   iconBottomNone?: boolean;
-// }
-
-// export const Widget = styled("div")(
-//   ({ token, active, gap, col, minHeight, iconBottomNone }: WidgetTypes) => {
-//     const primaryColor = token.colorPrimary;
-//     const ogGap = gap * 2;
-//     return {
-//       width: `calc((100% / ${col}) - ${ogGap}px + (${ogGap}px / ${col}))`,
-//       border: `1px solid`,
-//       borderRadius: 4,
-//       minHeight: minHeight ? minHeight : 50,
-//       display: "flex",
-//       alignItems: `center`,
-//       justifyContent: `center`,
-//       padding: 6,
-//       textAlign: `center`,
-//       cursor: `pointer`,
-//       backgroundColor: active ? primaryColor : colors.gray3,
-//       boxShadow: active ? `4px 4px 6px #c0d9fd` : `none`,
-//       borderColor: active ? primaryColor : colors.gray2,
-//       color: active ? colors.white : "inherit",
-//       "&:hover": {
-//         color: active ? colors.white : primaryColor,
-//         borderColor: primaryColor,
-//       },
-//       ".midIcon": {
-//         marginBottom: iconBottomNone ? 6 : 0,
-//         "& > svg *": {
-//           fill: active ? colors.white : colors.black,
-//           stroke: active ? colors.white : colors.black,
-//         },
-//       },
-//     };
-//   }
-// );
-
 export const BookNowBtn = styled(Button)`
 position: fixed;
 right: 20px;
@@ -87,7 +45,7 @@ padding: 10px;
 border: 4px solid #fff;
 display: flex;
 flex-direction: column;
-.container{
+.tripContainer{
   overflow-y: auto;
   height: 100%;
   display: flex;

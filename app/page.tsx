@@ -5,7 +5,6 @@ import { BookNowBtn, Loader } from '@/styles';
 const BookingWindow = dynamic(() => import('@/components/bookingWindow'), 
 { loading: () => <Loader><span className='load' /> </Loader>, ssr: false })
 
-
 export default function Home() {
 
   const [windowOpen, setWindowOpen] = useState<boolean>(false)

@@ -1,3 +1,4 @@
+import { blurImgLoader } from "@/constants";
 import Image from "next/image";
 
 export function CoverImage({ photoUrl, width, height, alt }: CoverImageTypes) {
@@ -8,6 +9,8 @@ export function CoverImage({ photoUrl, width, height, alt }: CoverImageTypes) {
           alt={alt}
           sizes="150px"
           fill
+          placeholder = 'blur'
+          blurDataURL={blurImgLoader}
           style={{
             objectFit: 'cover',
           }}

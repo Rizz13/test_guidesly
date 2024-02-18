@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useReducer } from 'react';
+import { PropsWithChildren, createContext, useReducer } from 'react';
 
 const initialState: IntialStateTypes = {
   tripId: "",
@@ -9,35 +9,35 @@ const initialState: IntialStateTypes = {
 }
 
 export const TripContext = createContext({
-    state: initialState,
-    dispatch: (_action) => {}
+  state: initialState,
+  dispatch: (_action) => {}
 });
 
 const reducer = (state, action: ActionType) => {
-    switch (action.type) {
-      case "Trip":
-        return { ...state, tripId: action.payload };
-      case "Date":
-        return { ...state, date: action.payload };
-      case "Time":
-        return { ...state, tripTimeId: action.payload };
-      case "Tab":
-        return { ...state, activeTab: action.payload };
-      case "ReSetTab":
-        return { ...state, activeTab: "Trip" };
-      default:
-        return state;
-    }
-  };
+  switch (action.type) {
+    case "Trip":
+      return { ...state, tripId: action.payload };
+    case "Date":
+      return { ...state, date: action.payload };
+    case "Time":
+      return { ...state, tripTimeId: action.payload };
+    case "Tab":
+      return { ...state, activeTab: action.payload };
+    case "ReSetTab":
+      return { ...state, activeTab: "Trip" };
+    default:
+      return state;
+  }
+};
 
-export const TripProvider = ({ children }) => {
+export const TripProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
-    const [state, dispatch] = useReducer(reducer, initialState);
-  
-    return (
-      <TripContext.Provider value={{ state, dispatch }}>
-        {children}
-      </TripContext.Provider>
-    );
-  };
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <TripContext.Provider value={{ state, dispatch }}>
+      {children}
+    </TripContext.Provider>
+  );
+};
   

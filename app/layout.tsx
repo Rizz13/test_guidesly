@@ -10,10 +10,9 @@ const montserrat = Montserrat({
   subsets: ['latin'],
 })
 
-
 export const metadata: Metadata = {
   title: "Trip Booking",
-  description: "Famous places are available."
+  description: "Top Famous places are available."
 }
 
 export default function RootLayout({
@@ -30,12 +29,7 @@ export default function RootLayout({
             theme={{
               token: {
                 fontFamily: montserrat.style.fontFamily,
-                // Seed Token
                 colorPrimary: '#303030',
-                // borderRadius: 2,
-                
-                // Alias Token
-                // colorBgContainer: '#f6ffed',
               },
               components:{
                 Typography:{
