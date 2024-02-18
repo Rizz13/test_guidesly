@@ -24,25 +24,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-        <StyledComponentsRegistry>
-          <ConfigProvider
-            theme={{
-              token: {
-                fontFamily: montserrat.style.fontFamily,
-                colorPrimary: '#303030',
-              },
-              components:{
-                Typography:{
-                  titleMarginBottom: 0
+        <TripProvider>
+          <StyledComponentsRegistry>
+            <ConfigProvider
+              theme={{
+                token: {
+                  fontFamily: montserrat.style.fontFamily,
+                  colorPrimary: '#303030',
+                },
+                components:{
+                  Typography:{
+                    titleMarginBottom: 0
+                  }
                 }
-              }
-            }}
-          >
-            <TripProvider>
-              {children}
-            </TripProvider>
-          </ConfigProvider>
-        </StyledComponentsRegistry>
+              }}
+            >
+                {children}
+            </ConfigProvider>
+          </StyledComponentsRegistry>
+        </TripProvider>
       </body>
     </html>
   )
