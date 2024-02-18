@@ -27,8 +27,6 @@ export default function TripDetails() {
     }
   }, [state, trips, times])
 
-  console.log("data", state)
-
   return (
     <div className="container">
       <Title level={4} className="mt1">Booking Details</Title>

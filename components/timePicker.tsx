@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { TripContext } from "@/store/store";
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { TimeContainer } from "@/styles";
 import { times } from "@/constants";
 import { Button, Typography } from "antd";
@@ -9,10 +9,12 @@ export default function TimePicker() {
     
   const [timeId, setTimeId] = useState<string>(undefined)
   const {dispatch} = useContext(TripContext);
+  const router = useRouter()
   const { Text } = Typography;
 
   const updateTime = () => {
     dispatch({type: "Time", payload: timeId})
+    router.push('/details')
   }
 
   return <>
@@ -29,7 +31,7 @@ export default function TimePicker() {
           
           <Button type="primary" className="fullWidth mt1" disabled={timeId === undefined}
           onClick={updateTime}>
-            <Link href="/details" >Choose a Guide</Link>
+            Choose a Guide
           </Button>
         </>
   }
